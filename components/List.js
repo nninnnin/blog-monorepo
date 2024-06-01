@@ -1,16 +1,10 @@
-class List extends HTMLElement {
+class List extends Base {
   constructor() {
     super();
-
-    this.attachShadow({ mode: "open" });
-  }
-
-  connectedCallback() {
-    this.render();
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML += `
       <style>
         :host {
           display: block;

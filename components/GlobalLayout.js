@@ -1,19 +1,11 @@
-class GlobalLayout extends HTMLElement {
+class GlobalLayout extends Base {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
-  }
-
-  connectedCallback() {
-    this.render();
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML += `
       <style>
-        :host {
-          display: block;
-        }
       </style>
 
       <slot></slot>
