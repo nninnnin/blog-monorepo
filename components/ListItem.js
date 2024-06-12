@@ -11,7 +11,7 @@ class ListItem extends Base {
         }
       </style>
 
-      <a href="/posts/${this.getAttribute("slug")}.html">
+      <a href="/${this.getAttribute("slug")}.html">
         <slot>
         </slot>
       </a>

@@ -9,6 +9,10 @@ class List extends Base {
         :host {
           display: block;
         }
+
+        :host ::slotted(list-item) {
+          margin-bottom: 6px;
+        }
       </style>
 
       <slot></slot>
