@@ -3,15 +3,20 @@ class ListItem extends Base {
     super();
   }
 
+  styles = `
+    <style>
+      :host {
+        display: block;
+        margin-bottom: 6px;
+      }
+    </style>
+  `;
+
   render() {
     this.shadowRoot.innerHTML += `
-      <style>
-        :host {
-          display: block;
-        }
-      </style>
+      ${this.styles}
 
-      <a href="/${this.getAttribute("slug")}.html">
+      <a href="${this.getAttribute("href")}">
         <slot>
         </slot>
       </a>
