@@ -9,13 +9,35 @@
     <script src="/components/GlobalLayout.js"></script>
     <script src="/components/List.js"></script>
     <script src="/components/ListItem.js"></script>
+
+    <style>
+      * {
+        color: #b9b9b9;
+
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 1em;
+      }
+
+      ul > li {
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        margin-left: 40px;
+      }
+    </style>
   </head>
 
   <body>
     <global-layout>
       <h3>안녕하세요</h3>
-      웹 개발을 하는
-      <a href="https://instagram.com/justindglee">이동규(Justin)</a>입니다.
+      <p>
+        웹 개발자
+        <a href="https://instagram.com/justindglee">이동규</a> 입니다.
+      </p>
 
       <h3>이력</h3>
 
@@ -39,12 +61,12 @@
 
       <h3>기술</h3>
 
-      <p>
-        JavaScript, p5.js, Three.js <br />
-        React, React Native, Next.js<br />
-        Web Component, WebAR(XR), WebAudio<br />
-        Node.js, Webpack, GraphQL, Vercel<br />
-      </p>
+      <ul style="list-style: none">
+        <li>JavaScript, p5.js, Three.js</li>
+        <li>React, React Native, Next.js</li>
+        <li>Web Component, WebAR(XR), WebAudio</li>
+        <li>Node.js, Webpack, GraphQL, Vercel</li>
+      </ul>
     </global-layout>
   </body>
 </html>
