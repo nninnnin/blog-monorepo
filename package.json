@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build ./src/pages/*.html",
-    "dev": "parcel serve 'src/pages/*.html'"
+    "prebuild": "rm -rf dist && mkdir dist && cp -r public/* dist/",
+    "build": "pnpm run prebuild && parcel build ./src/pages/*.html",
+    "dev": "pnpm run prebuild && parcel serve 'src/pages/*.html'"
   },
   "keywords": [],
   "author": "",

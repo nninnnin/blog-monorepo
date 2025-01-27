@@ -26,8 +26,8 @@ export class NavigationComp extends LitElement {
 
     li:first-child {
       margin-right: auto;
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
     }
 
     a {
@@ -37,7 +37,7 @@ export class NavigationComp extends LitElement {
       font-size: 24px;
     }
 
-    svg {
+    #logo {
       cursor: pointer;
     }
   `;
@@ -46,12 +46,10 @@ export class NavigationComp extends LitElement {
     return html`<div>
       <ul>
         <li>
-          <svg width="20" height="20">
-            <rect x="0" y="0" width="20" height="20" fill="white" />
-          </svg>
+          <img id="logo" width="24" height="24" src="/browser-eye.png" />
         </li>
 
-        <li><a href="/">About</a></li>
+        <li><a href="/about">About</a></li>
         <li><a href="/">Posts</a></li>
         <li><a href="/">Works</a></li>
       </ul>
