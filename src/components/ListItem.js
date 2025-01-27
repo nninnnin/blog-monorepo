@@ -1,3 +1,5 @@
+import Base from "@/components/Base.js";
+
 class ListItem extends Base {
   constructor() {
     super();
@@ -7,7 +9,16 @@ class ListItem extends Base {
     <style>
       :host {
         display: block;
-        margin-bottom: 6px;
+
+        margin-right: 1em;
+
+        font-size: 2em;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
       }
     </style>
   `;

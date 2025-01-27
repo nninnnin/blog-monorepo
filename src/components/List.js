@@ -1,3 +1,5 @@
+import Base from "@/components/Base.js";
+
 class List extends Base {
   constructor() {
     super();
@@ -6,6 +8,15 @@ class List extends Base {
   render() {
     this.shadowRoot.innerHTML += `
       <style>
+        :host {
+          background-color: var(--theme-primary);
+          color: white;
+
+          display: flex;
+          align-items: center;
+
+          padding: 1em;
+        }
       </style>
 
       <slot></slot>

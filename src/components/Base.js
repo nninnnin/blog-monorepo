@@ -10,3 +10,5 @@ class Base extends HTMLElement {
 
   render() {}
 }
+
+export default Base;

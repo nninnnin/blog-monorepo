@@ -5,19 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>소개</title>
 
-    <script src="/components/Base.js"></script>
-    <script src="/components/GlobalLayout.js"></script>
-    <script src="/components/List.js"></script>
-    <script src="/components/ListItem.js"></script>
+    <link rel="stylesheet" href="/global.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0"
-    />
+    <script type="module" src="/src/components/Navigation.js"></script>
 
     <style>
       * {
-        color: #b9b9b9;
+        color: var(--theme-primary);
 
         font-weight: 600;
         font-family: "Apple SD Gothic Neo";
@@ -25,6 +19,7 @@
 
       h3 {
         font-size: 1em;
+        margin: 0;
       }
 
       ul > li {
@@ -39,11 +34,10 @@
 
   <body>
     <global-layout>
+      <my-navigation></my-navigation>
+
       <h3>안녕하세요</h3>
-      <p>
-        웹 개발자
-        <a href="https://instagram.com/justindglee">이동규</a> 입니다.
-      </p>
+      <p>웹 개발자 이동규입니다.</p>
 
       <h3>이력</h3>
 
