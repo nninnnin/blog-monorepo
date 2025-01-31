@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="/global.css" />
 
-    <script type="module" src="/src/components/Navigation.js"></script>
+    <script type="module" src="/src/components/GlobalLayout.js"></script>
+    <script type="module" src="/src/components/about/Container.js"></script>
 
     <style>
       * {
@@ -27,44 +28,123 @@
       p {
         margin-left: 40px;
       }
+
+      li ul {
+        margin-top: 0.5em;
+      }
+
+      li + li {
+        margin-top: 0.5em;
+      }
+
+      li:last-child {
+        margin-bottom: 0.75em;
+      }
     </style>
   </head>
 
   <body>
     <global-layout>
-      <my-navigation></my-navigation>
+      <about-container>
+        <h3>Hello :-)</h3>
+        <p>
+          I am a Web Developer familiar with JavaScript and Web environments.
+        </p>
 
-      <h3>안녕하세요</h3>
-      <p>웹 개발자 이동규입니다.</p>
+        <h3>Career</h3>
 
-      <h3>이력</h3>
+        <ul>
+          <li>
+            Internship at
+            <a href="https://www.carrotins.com">Carrot Insurance</a>, a web
+            based insurance company.
 
-      <ul>
-        <li>
-          <a href="https://www.carrotins.com">캐롯손해보험</a>
-          에서 FE 인턴
-        </li>
-        <li>
-          <a href="https://vanillacoding.co">바닐라코딩</a> 에서 풀스택 개발자
-          및 부트캠프 멘토
-        </li>
-        <li>
-          <a href="https://chopsticks.market">찹스틱스</a> 에서 FE 개발 리드
-        </li>
-        <li>
-          <a href="https://rebel9.co.kr">레벨나인</a> 에서 인터랙티브 웹 미디어
-          개발
-        </li>
-      </ul>
+            <ul>
+              <li>UX reporting</li>
+              <li>
+                Design and build an editor feature for generating & editing
+                affiliate marketing event pages.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Fullstack Developer and Learning coach at
+            <a href="https://vanillacoding.co">Vanilla Coding</a>, a software
+            bootcamp.
 
-      <h3>기술</h3>
+            <ul>
+              <li>
+                Reviewing PRs of bootcamp students' weekly coding assignments
+              </li>
+              <li>Write reading materials for students</li>
+              <li>
+                Build productivity tools for operating the bootcamp programs
+              </li>
+              <li>Build a website for registering bootcamp</li>
+              <li>
+                Build an RN based android application for marketing purposes
+              </li>
+            </ul>
+          </li>
 
-      <ul style="list-style: none">
-        <li>JavaScript, p5.js, Three.js</li>
-        <li>React, React Native, Next.js</li>
-        <li>Web Component, WebAR(XR), WebAudio</li>
-        <li>Node.js, Webpack, GraphQL, Vercel</li>
-      </ul>
+          <li>
+            Lead Frontend Developer at
+            <a href="https://chopsticks.market">Chopsticks</a>, an e-commerce
+            platform for crafters.
+
+            <ul>
+              <li>
+                Build a comprehensive e-commerce platform from the ground up,
+                featuring
+                <ul>
+                  <li>user registration and management,product management,</li>
+                  <li>
+                    dynamic prices calcuation considering various shipping
+                    conditions,
+                  </li>
+                  <li>shopping cart functionality,</li>
+                  <li>and integrated payment processing.</li>
+                </ul>
+              </li>
+              <li>
+                Initiatively propose and create timeline and taskcards for job
+                scheduling for dev team and document specifications of
+                developing features of the project using Notion.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Frontend Developer at <a href="https://rebel9.co.kr">Rebel9</a>.
+            <ul>
+              <li>
+                Mainly work with
+                <a href="https://justindglee.netlify.app/"
+                  >Interactive web applications.</a
+                >
+              </li>
+              <li>
+                Build a tool, named
+                <a href="https://www.npmjs.com/package/@rebel9/memex-fetcher"
+                  >Memex Fetcher</a
+                >, to simplify and utilize lines of boiler plating codes for
+                fetching data from Memex, a CMS which is build within the
+                company and publicly ongoing service, and publish the tool as an
+                NPM package.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Toolset</h3>
+
+        <ul style="list-style: none">
+          <li>JavaScript, p5.js, Three.js</li>
+          <li>React, React Native, Next.js</li>
+          <li>Web Component, WebAR(XR), WebAudio</li>
+          <li>Node.js, Webpack, GraphQL, Vercel</li>
+        </ul>
+      </about-container>
     </global-layout>
   </body>
 </html>

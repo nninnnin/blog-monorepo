@@ -6,12 +6,16 @@ class AboutContainer extends LitElement {
   static styles = css`
     :host {
       display: block;
-      background-color: var(--theme-primary);
+
+      padding: 1em;
+      padding-top: 2em;
     }
   `;
 
   render() {
-    return html`<div></div>`;
+    return html`<div>
+      <slot></slot>
+    </div>`;
   }
 }
 
