@@ -8,7 +8,13 @@ export class NavigationComp extends LitElement {
       display: block;
       background-color: var(--theme-primary);
 
-      padding: 18px;
+      --padding-value: 18px;
+      padding: var(--padding-value);
+
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: calc(100% - var(--padding-value) * 2);
     }
 
     ul {
@@ -46,12 +52,17 @@ export class NavigationComp extends LitElement {
     return html`<div>
       <ul>
         <li>
-          <img id="logo" width="24" height="24" src="/browser-eye.png" />
+          <a href="/" style="display :flex; align-items: center">
+            <img id="logo" width="24" height="24" src="/browser-eye.png" />
+            <span
+              style="margin-left: 7.5px; margin-bottom: -2px; white-space: nowrap; font-size: 20px; font-weight: bold"
+              >Justin Donggyu Lee</span
+            >
+          </a>
         </li>
 
         <li><a href="/about">About</a></li>
-        <li><a href="/">Posts</a></li>
-        <li><a href="/">Works</a></li>
+        <li><a href="/works">Works</a></li>
       </ul>
     </div>`;
   }
