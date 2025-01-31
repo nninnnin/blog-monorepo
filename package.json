@@ -22,9 +22,9 @@
     "lit": "^3.2.1"
   },
   "alias": {
-    "@/components/*": "/src/components/$1"
+    "@/*": "/src/$1"
   },
   "source": {
-    "@/components/*": "/src/components/$1"
+    "@/*": "/src/$1"
   }
 }

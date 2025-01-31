@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>작업물</title>
 
-    <script type="module" src="/src/components/Base.js"></script>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
     <script type="module" src="/src/components/GlobalLayout.js"></script>
-    <script type="module" src="/src/components/List.js"></script>
-    <script type="module" src="/src/components/ListItem.js"></script>
 
     <style>
       table {
@@ -29,23 +28,29 @@
       tr:nth-child(even) {
         background-color: #f2f2f2;
       }
+
+      #container {
+        padding-top: 2em;
+      }
     </style>
   </head>
 
   <body>
     <global-layout>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <a href="https://piknic-houser-wirth.vercel.app/">
-                Piet Oudolf 정원 탐색기
-              </a>
-            </td>
-            <td>Piknic <정원 만들기>, 2021</td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="container">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://piknic-houser-wirth.vercel.app/">
+                  Piet Oudolf 정원 탐색기
+                </a>
+              </td>
+              <td>Piknic <정원 만들기>, 2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </global-layout>
   </body>
 </html>

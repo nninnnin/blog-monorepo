@@ -1,0 +1,30 @@
+* {
+  --theme-primary: rgb(60, 35, 60);
+  overscroll-behavior: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100dvh;
+}
+
+html {
+  background-color: gainsboro;
+}
+
+global-layout:not(:defined) {
+  display: inline-block;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+about-container:not(:defined) {
+  display: inline-block;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
