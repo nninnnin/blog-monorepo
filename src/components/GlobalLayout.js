@@ -5,28 +5,34 @@ import "@/components/Navigation.js";
 
 @customElement("global-layout")
 class GlobalLayout extends LitElement {
-  static styles = css`
-    :host {
-      margin: 0;
-      padding: 0;
+  static styles = [
+    css`
+      :host {
+        position: relative;
 
-      display: flex;
-      flex-direction: column;
-      min-height: 100dvh;
+        margin: 0 auto;
+        padding: 0;
 
-      position: relative;
-    }
+        max-width: 1440px;
+        background-color: #fff;
 
-    :host div {
-      width: 600px;
-      margin: 0 auto;
-    }
-  `;
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+      }
+
+      .contents {
+        width: 600px;
+        margin: 0 auto;
+      }
+    `,
+  ];
 
   render() {
     return html`
       <my-navigation></my-navigation>
-      <div>
+
+      <div class="contents">
         <slot></slot>
       </div>
     `;

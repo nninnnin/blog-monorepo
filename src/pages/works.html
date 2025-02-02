@@ -8,29 +8,16 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
 
     <script type="module" src="/src/components/GlobalLayout.js"></script>
+    <script type="module" src="/src/components/works/WorkTable.js"></script>
+    <script type="module" src="/src/components/works/WorkItem.js"></script>
 
     <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        border: 1px solid #000;
-        padding: 8px;
-      }
-
-      th {
-        background-color: #f2f2f2;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
       #container {
         padding-top: 2em;
+      }
+
+      work-item + work-item {
+        border-top: 0px;
       }
     </style>
   </head>
@@ -38,18 +25,132 @@
   <body>
     <global-layout>
       <div id="container">
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <a href="https://piknic-houser-wirth.vercel.app/">
-                  Piet Oudolf 정원 탐색기
-                </a>
-              </td>
-              <td>Piknic <정원 만들기>, 2021</td>
-            </tr>
-          </tbody>
-        </table>
+        <work-table>
+          <work-item
+            title="@rebel9/memex-fetcher"
+            link="https://www.npmjs.com/package/@rebel9/memex-fetcher"
+            team="Rebel9"
+            type="package"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="성북마을 보물찾기"
+            link="https://www.treasure-sb.kr/"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="용담플레이"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="닥터레나의 실험실"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="청주에 뜬 달"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="찾아봐요 마음조각"
+            link="https://naver.com"
+            team="Rebel9"
+            type="responsive web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="코리아 메모리얼"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="대동 헤리티지"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="우당탕탕 인턴십"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="이모션 디코더"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="옵티컬 미, 포텐셜 미"
+            link="https://naver.com"
+            team="Rebel9"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="Chopsticks Shop"
+            link="https://naver.com"
+            team="Chopsticks"
+            type="mobile web"
+            year="2024"
+            index="0"
+          ></work-item>
+          <work-item
+            title="Chopsticks Partner(Seller)s Admin"
+            link="https://naver.com"
+            team="Chopsticks"
+            type="desktop web"
+            year="2024"
+            index="0"
+          ></work-item>
+
+          <work-item
+            title="Piet Oudolf 정원탐색기"
+            link="https://naver.com"
+            team="Piknic"
+            type="mobile web"
+            year="2021"
+            index="1"
+          ></work-item>
+        </work-table>
       </div>
     </global-layout>
   </body>
