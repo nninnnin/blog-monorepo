@@ -16,8 +16,13 @@
         padding-top: 2em;
       }
 
-      work-item + work-item {
-        border-top: 0px;
+      work-table work-item:only-child {
+        font-weight: 800;
+      }
+
+      div[slot="tbody"] work-item:hover {
+        background-color: var(--theme-primary);
+        color: white;
       }
     </style>
   </head>
@@ -26,130 +31,182 @@
     <global-layout>
       <div id="container">
         <work-table>
-          <work-item
-            title="@rebel9/memex-fetcher"
-            link="https://www.npmjs.com/package/@rebel9/memex-fetcher"
-            team="Rebel9"
-            type="package"
-            year="2024"
-            index="0"
-          ></work-item>
+          <div slot="thead">
+            <work-item
+              title="Title"
+              team="Team"
+              platform="Platform"
+              media="Media Device"
+              year="Year"
+              index="0"
+            ></work-item>
+          </div>
 
-          <work-item
-            title="성북마을 보물찾기"
-            link="https://www.treasure-sb.kr/"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+          <div slot="tbody">
+            <work-item
+              title="AR Framework"
+              team="Rebel9"
+              platform="web browser"
+              media="desktop / mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="용담플레이"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="@rebel9/memex-fetcher"
+              link="https://www.npmjs.com/package/@rebel9/memex-fetcher"
+              team="Rebel9"
+              platform="npm"
+              media="-"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="닥터레나의 실험실"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="성북마을 보물찾기"
+              link="https://www.treasure-sb.kr/"
+              team="Rebel9"
+              platform="web browser"
+              media="mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="청주에 뜬 달"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="용담플레이"
+              link="https://yongdamplay.co.kr/"
+              team="Rebel9"
+              platform="web browser"
+              media="mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="찾아봐요 마음조각"
-            link="https://naver.com"
-            team="Rebel9"
-            type="responsive web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="닥터레나의 실험실"
+              link="https://renalab.xyz"
+              team="Rebel9"
+              platform="web browser"
+              media="desktop / mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="코리아 메모리얼"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="청주에 뜬 달"
+              link="https://www.wishfullmoon.kr/"
+              team="Rebel9"
+              platform="web browser"
+              media="desktop / mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="대동 헤리티지"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="찾아봐요 마음조각"
+              link="https://survey-sculpture.mmca.go.kr/"
+              team="Rebel9"
+              platform="web browser"
+              media="desktop / mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="우당탕탕 인턴십"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="YDP DADADA"
+              link="https://ar-dadada.ccydp.kr/"
+              team="Rebel9"
+              platform="web browser"
+              media="mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="이모션 디코더"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="코리아 메모리얼"
+              link="https://memorial-timecube.com/"
+              team="Rebel9"
+              platform="web browser"
+              media="mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="옵티컬 미, 포텐셜 미"
-            link="https://naver.com"
-            team="Rebel9"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="대동 헤리티지"
+              link="https://arheritage.inmun-story.com/"
+              team="Rebel9"
+              platform="web browser"
+              media="mobile"
+              year="2024"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="Chopsticks Shop"
-            link="https://naver.com"
-            team="Chopsticks"
-            type="mobile web"
-            year="2024"
-            index="0"
-          ></work-item>
-          <work-item
-            title="Chopsticks Partner(Seller)s Admin"
-            link="https://naver.com"
-            team="Chopsticks"
-            type="desktop web"
-            year="2024"
-            index="0"
-          ></work-item>
+            <work-item
+              title="우당탕탕 인턴십"
+              team="Rebel9"
+              platform="web browser"
+              media="projection / ipad"
+              year="2023"
+              index="0"
+            ></work-item>
 
-          <work-item
-            title="Piet Oudolf 정원탐색기"
-            link="https://naver.com"
-            team="Piknic"
-            type="mobile web"
-            year="2021"
-            index="1"
-          ></work-item>
+            <work-item
+              title="이모션 디코더"
+              link="https://www.decoding-my-emotion.com/"
+              team="Rebel9"
+              platform="web browser"
+              media="desktop / mobile"
+              year="2023"
+              index="0"
+            ></work-item>
+
+            <work-item
+              title="옵티컬 미, 포텐셜 미"
+              link="https://piknic-entrepreneurship.vercel.app/"
+              team="Rebel9"
+              platform="web browser"
+              media="mobile"
+              year="2023"
+              index="0"
+            ></work-item>
+
+            <work-item
+              title="Chopsticks Shop"
+              link="https://chopsticks.market"
+              team="Chopsticks"
+              platform="web browser"
+              media="mobile"
+              year="2023"
+              index="0"
+            ></work-item>
+            <work-item
+              title="Chopsticks Partner(Seller)s Admin"
+              team="Chopsticks"
+              platform="web browser"
+              media="desktop"
+              year="2023"
+              index="0"
+            ></work-item>
+
+            <work-item
+              title="Wordie"
+              team="Vanilla Coding"
+              platform="Android"
+              media="mobile"
+              year="2022"
+              index="0"
+            ></work-item>
+
+            <work-item
+              title="Piet Oudolf 정원탐색기"
+              team="Piknic"
+              platform="web browser"
+              media="wall projection"
+              year="2021"
+              index="1"
+            ></work-item>
+          </div>
         </work-table>
       </div>
     </global-layout>

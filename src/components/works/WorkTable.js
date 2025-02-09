@@ -15,10 +15,14 @@ export class TableRow extends LitElement {
   `;
 
   render() {
-    return html`<table>
-      <tbody>
-        <slot></slot>
-      </tbody>
-    </table>`;
+    return html`<div>
+      <div class="thead">
+        <slot name="thead"></slot>
+      </div>
+
+      <div class="tbody">
+        <slot name="tbody"></slot>
+      </div>
+    </div>`;
   }
 }

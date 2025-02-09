@@ -1,18 +1,24 @@
-class PostItem extends ListItem {
-  constructor() {
-    super();
-  }
+import { LitElement, html, css } from "lit";
+import { customElement } from "lit/decorators.js";
+
+@customElement("post-item")
+export class PostItem extends LitElement {
+  static properties = {
+    slug: { type: String },
+  };
+
+  static styles = css`
+    :host {
+      display: block;
+      padding: 1em;
+      margin-top: 1em;
+
+      background-color: var(--theme-primary);
+      color: white;
+    }
+  `;
 
   render() {
-    this.shadowRoot.innerHTML = `
-      ${this.styles}
-
-      <a href="/${this.getAttribute("slug")}.html">
-        <slot>
-        </slot>
-      </a>
-    `;
+    return html`<slot></slot>`;
   }
 }
-
-customElements.define("post-item", PostItem);

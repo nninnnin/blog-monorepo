@@ -22,7 +22,6 @@ class GlobalLayout extends LitElement {
       }
 
       .contents {
-        width: 600px;
         margin: 0 auto;
       }
     `,

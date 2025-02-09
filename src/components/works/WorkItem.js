@@ -1,13 +1,14 @@
-import { LitElement, html, css, unsafeCSS } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 
 @customElement("work-item")
 export class TableRow extends LitElement {
   static properties = {
     title: { type: String },
-    titleLink: { type: String },
+    link: { type: String },
     team: { type: String },
-    type: { type: String },
+    platform: { type: String },
+    media: { type: String },
     year: { type: String },
     index: { type: Number },
   };
@@ -17,12 +18,17 @@ export class TableRow extends LitElement {
       width: 100%;
       display: block;
 
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      margin-top: -1px;
+
+      cursor: default;
     }
 
     :host:last-child {
       background-color: red;
+    }
+
+    a {
+      color: inherit;
     }
 
     tr {
@@ -30,13 +36,16 @@ export class TableRow extends LitElement {
     }
 
     td {
-      border-left: 1px solid #000;
-      border-right: 1px solid #000;
       padding: 8px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     td:first-child {
       flex: 1;
+      justify-content: flex-start;
     }
 
     td + td {
@@ -44,18 +53,26 @@ export class TableRow extends LitElement {
     }
 
     td.team {
-      display: block;
       overflow: hidden;
 
-      width: 5em;
+      width: 6em;
 
       text-align: center;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
 
-    td.type {
-      display: block;
+    td.platform {
+      overflow: hidden;
+
+      width: 8em;
+
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    td.media {
       overflow: hidden;
 
       width: 8em;
@@ -76,13 +93,16 @@ export class TableRow extends LitElement {
   }
 
   render() {
-    return html`<tr>
-      <td>
-        <a href=${this.titleLink}> ${this.title} </a>
-      </td>
+    const title = this.link
+      ? html` <a href=${this.link}> ${this.title}</a> `
+      : html` ${this.title} `;
 
+    return html`<tr>
+      <td class="title">${title}</td>
+
+      <td class="platform">${this.platform}</td>
+      <td class="media">${this.media}</td>
       <td class="team">${this.team}</td>
-      <td class="type">${this.type}</td>
       <td class="year">${this.year}</td>
     </tr>`;
   }

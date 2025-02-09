@@ -9,6 +9,8 @@ class AboutContainer extends LitElement {
 
       padding: 1em;
       padding-top: 2em;
+
+      width: 600px;
     }
   `;
 

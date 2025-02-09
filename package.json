@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rm -rf dist && mkdir dist && cp -r public/* dist/",
     "build": "pnpm run prebuild && parcel build ./src/pages/*.html",
-    "dev": "pnpm run prebuild && parcel serve 'src/pages/*.html'"
+    "dev": "pnpm run build && parcel serve './src/pages/*.html' --no-cache"
   },
   "keywords": [],
   "author": "",
